@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<title>SRK FANS | Games</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main 1.css" />
+		<link rel="icon" type="ico" href="SRKICON.ico">
+		<style>
+			header  {
+				background-image: url("games.jpg");
+				background-position: center;
+				background-size: cover;
+				}
+				#bigpic {
+					max-width: 100%;
+				}
+			</style>
+			<script>
+correctAnswers=[0,1,2,1,0];
+var AnsweredCorrectly=0;
+function start(){
+document.getElementById('quizstart').style.display="none";
+document.getElementById('question0').style.display="block";
+}
+function toggle(a,b){
+AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:0);
+document.getElementById('question'+a).style.display="none";
+document.getElementById('question'+b).style.display="block";
+}
+function end(a){
+AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:0);
+document.getElementById('question'+a).style.display="none";
+document.getElementById('summary').style.display="block";
+document.getElementById('result').innerHTML=AnsweredCorrectly;
+}
+function picture(){
+        var pic = "Guess.jpg"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+}
+function answer(){
+document.getElementById('answers').style.display="none";
+document.getElementById('guessanswer').style.display="block";
+}
+</script>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">SRK <span>FANS</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+			<!-- Nav -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="videos.html">Videos</a></li>
+						<li><a href="photos.html">Photos</a></li>
+						<li><a href="films.html">Films</a></li>
+						<li><a href="games.html">Games</a></li>
+						<li><a href="fanstory.html">Fan Story</a></li>
+						<li><a href="contact.html">Contact Us</a><li>
+					</ul>
+				</nav>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Section -->
+							<section class="wrapper1">
+								<div class="inner">
+									<header class="align-center">
+										<br><br><br><br><br><br><br><h1>SRK FANS Games</h1><br><br><br><br><br><br><br>
+									</header>
+									</div>
+							</section>
+
+							<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="col col1">
+										<div class="image round fit">
+											<a class="link"><img src="quiz.jpg" alt="" /></a>
+										</div>
+									</div>
+									<div class="col col2">
+										<div id="quizstart">
+    <button id="play" onclick="start()"><b>PLAY QUIZ</b></button>
+</div>
+<div id="question0" style="display:none">
+<span class="question">1. Shah Rukh's Movie Veer Zaara was directed by</span><br>
+<input type="radio" name="ans0">Yash Chopra<br>
+<input type="radio" name="ans0">Yash Johar<br>
+<input type="radio" name="ans0">Karan Johar<br>
+<input type="radio" name="ans0">Farah Khan<br>
+   <button onclick="toggle(0,1)">Next</button>
+</div>
+<div id="question1" style="display:none">
+<span class="question">2. Name the debut film of Shahrukh Khan for which he also got the Filmfare Best Male Debut Award.</span><br>
+<input type="radio" name="ans1">Darr<br>
+<input type="radio" name="ans1">Deewana<br>
+<input type="radio" name="ans1">Baazigar<br>
+<input type="radio" name="ans1">Dilwale Dulhaniya Le Jayenge<br>
+   <button onclick="toggle(1,2)">Next</button>
+</div>
+<div id="question2" style="display:none">
+<span class="question">3. What is Shahrukh Khan's Date of Birth?</span><br>
+<input type="radio" name="ans2">2 November 1963<br>
+<input type="radio" name="ans2">2 November 1964<br>
+<input type="radio" name="ans2">2 November 1965<br>
+<input type="radio" name="ans2">2 November 1966<br>
+   <button onclick="toggle(2,3)">Next</button>
+</div>
+<div id="question3" style="display:none">
+<span class="question">4. Name the film in which Shahrukh Khan played the role of a Ghost.</span><br>
+<input type="radio" name="ans3">Om Shanti Om<br>
+<input type="radio" name="ans3">Paheli<br>
+<input type="radio" name="ans3">Billu<br>
+<input type="radio" name="ans3">Veer Zaara<br>
+   <button onclick="toggle(3,4)">Next</button>
+</div>
+<div id="question4" style="display:none">
+<span class="question">5. Name the film for which Shahrukh Khan received the Filmfare Best Villain Award in 1994.</span><br>
+<input type="radio" name="ans4">Anjaam<br>
+<input type="radio" name="ans4">Darr<br>
+<input type="radio" name="ans4">Chamatar<br>
+<input type="radio" name="ans4">Baazigar<br>
+   <button onclick="end(4)">End & Result</button>
+</div>
+
+<div id="summary" style="display:none">
+Your score is <span id="result"></span>/5.<br>
+<a href="games.html"><small><small><small><small><small>Play Again?</small></small></small></small></small></a>
+</div>
+									</div>
+								</div>
+							</section>
+
+							<!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h1>Guess SRK Movies</h1>
+									<div id="guess">
+  								<img id="bigpic" src="" />
+  							<br />
+    					<button onclick="picture()">Guess</button>
+  				</div>
+								</div>
+								<div class="col col1 first">
+									<div class="image round fit">
+										<a class="link"><img src="quiz.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section><br>
+
+					<div id="answers">
+    <button onclick="answer()">Answers</button>
+  </div>
+  <div id="guessanswer" style="display:none">
+    <span class="ans"><p style="float:right;">Quiz: &nbsp<br>
+			1. Yash Chopra &nbsp<br>
+		2. Deewana &nbsp<br>
+		3. 2 November 1965 &nbsp<br>
+		4. Paheli &nbsp<br>
+		5. Anjaam &nbsp<br></p>
+		Guess: <br>
+			1. Billu<br>
+			2. Mohabbatein<br>
+			3. Chennai Express<br>
+			4. Ra.One<br>
+	5. Kabhi Han Kabhi Na<br>
+	6. Kabhi Khushi Kabhi Gham<br>
+	7. Swades<br>
+	8. Chak De! India<br>
+	9. Chalte Chalte<br>
+	10. Dulicate<br>
+	11. Bazigar<br>
+	12. Badshah<br>
+	13. Chahat<br>
+	14. Om Shanti Om<br>
+	15. Dil Se<br>
+	16. Kabhi Alvida  Na Kehna<br>
+	17. Dilwale Dulhaniya Le Jayenge<br>
+	18. Anjam<br>
+	19. Raju Ban Gya Gentleman<br>
+	20. Dil To Pagal Hai
+</span>
+</div>
+
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="copyright">
+						<ul class="icons">
+							<li><a href="" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="contactus.html" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
+						</ul>
+						<p>&copy; All rights reserved.</p>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
